@@ -3,6 +3,7 @@
 **Culture Compass** is a modern, lightweight, and responsive GenAI Travel Guide web application built with Next.js 15, React, TypeScript, and Tailwind CSS. It helps users plan their perfect trips by generating mock AI itineraries, storytelling, and an interactive checklist, all based on their budget, destination, travel style, and interests.
 
 ## Features ✨
+
 - **Smart Form:** Customize your trip by selecting destination, budget, travel style, and interests.
 - **AI-Powered Itinerary (Mock):** Get a day-by-day plan including top attractions, hidden gems, and local foods.
 - **Storytelling:** Enjoy an engaging AI-generated short story about the selected destination.
@@ -12,6 +13,7 @@
 - **Production Ready:** Fully Dockerized and ready to deploy to Google Cloud Run with an automated GitHub Actions pipeline.
 
 ## Architecture 🏛️
+
 - **Frontend Framework:** [Next.js 15](https://nextjs.org/) (App Router)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
 - **Language:** TypeScript
@@ -19,30 +21,35 @@
 - **Deployment:** Docker & Google Cloud Run
 
 ## Assumptions & Mocks 🎭
+
 Since this project requires no actual database or paid AI API keys by default, the GenAI elements (the travel plan, stories, and recommendations) are generated via a mock AI service layer in `lib/services/ai-service.ts`. This allows you to test the full UI without spending API credits.
 
 ## Setup & Local Development 💻
 
 1. **Clone the repository:**
+
    ```bash
    git clone <repository_url>
    cd culture-compass
    ```
 
 2. **Install dependencies:**
+
    ```bash
-   npm install
+   npx pnpm install
    ```
 
 3. **Run the development server:**
+
    ```bash
-   npm run dev
+   npx pnpm dev
    ```
+
    Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 4. **Build for production:**
    ```bash
-   npm run build
+   npx pnpm build
    ```
 
 ## Docker Commands 🐳
@@ -50,6 +57,7 @@ Since this project requires no actual database or paid AI API keys by default, t
 To build and run the application via Docker:
 
 1. **Build the image:**
+
    ```bash
    docker build -t culture-compass .
    ```
@@ -64,6 +72,7 @@ To build and run the application via Docker:
 This project includes a `.github/workflows/deploy.yml` file to automate deployment to Google Cloud Run.
 
 ### Steps to set up CI/CD:
+
 1. Create a Google Cloud Project and enable the **Cloud Run** and **Artifact Registry** APIs.
 2. Create a service account with the following roles:
    - Cloud Run Admin

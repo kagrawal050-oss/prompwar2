@@ -30,9 +30,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">91.66% </span>
+                <span class="strong">92.85% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>11/12</span>
+                <span class='fraction'>13/14</span>
             </div>
         
             
@@ -216,47 +216,47 @@
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use client"
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">"use client";
 &nbsp;
-import * as React from "react"
-import { Checkbox } from "@/components/ui/checkbox"
-import { Label } from "@/components/ui/label"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import * as React from "react";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 &nbsp;
 const defaultChecklist = {
   documents: [
@@ -282,34 +282,34 @@ const defaultChecklist = {
     { id: "adapter", label: "Travel Adapter" },
     { id: "toiletries", label: "Toiletries" },
     { id: "waterbottle", label: "Reusable Water Bottle" },
-  ]
-}
+  ],
+};
 &nbsp;
 export function TravelChecklist() {
-  const [checkedItems, setCheckedItems] = React.useState&lt;Record&lt;string, boolean&gt;&gt;({})
-  const [isLoaded, setIsLoaded] = React.useState(false)
+  const [checkedItems, setCheckedItems] = React.useState&lt;Record&lt;string, boolean&gt;&gt;({});
+  const [isLoaded, setIsLoaded] = React.useState(false);
 &nbsp;
   React.useEffect(() =&gt; {
     // Load from local storage on mount
-    const saved = localStorage.getItem("culture-compass-checklist")
+    const saved = localStorage.getItem("culture-compass-checklist");
     if (saved) {
       try {
         // eslint-disable-next-line react-hooks/set-state-in-effect
-        setCheckedItems(JSON.parse(saved))
+        setCheckedItems(JSON.parse(saved));
       } <span class="branch-0 cbranch-no" title="branch not covered" >catch (e) {</span>
-<span class="cstat-no" title="statement not covered" >        console.error("Failed to parse checklist from local storage", e)</span>
+<span class="cstat-no" title="statement not covered" >        console.error("Failed to parse checklist from local storage", e);</span>
 <span class="cstat-no" title="statement not covered" >      }</span>
     }
-    setIsLoaded(true)
-  }, [])
+    setIsLoaded(true);
+  }, []);
 &nbsp;
   const handleCheck = (id: string, checked: boolean) =&gt; {
-    const newChecked = { ...checkedItems, [id]: checked }
-    setCheckedItems(newChecked)
-    localStorage.setItem("culture-compass-checklist", JSON.stringify(newChecked))
-  }
+    const newChecked = { ...checkedItems, [id]: checked };
+    setCheckedItems(newChecked);
+    localStorage.setItem("culture-compass-checklist", JSON.stringify(newChecked));
+  };
 &nbsp;
-  if (!isLoaded) return null // Prevent hydration mismatch
+  if (!isLoaded) return null; // Prevent hydration mismatch
 &nbsp;
   return (
     &lt;Card className="glass h-full"&gt;
@@ -325,12 +325,12 @@ export function TravelChecklist() {
             &lt;div className="space-y-2"&gt;
               {items.map((item) =&gt; (
                 &lt;div key={item.id} className="flex items-center space-x-2"&gt;
-                  &lt;Checkbox 
-                    id={`check-${item.id}`} 
+                  &lt;Checkbox
+                    id={`check-${item.id}`}
                     checked={checkedItems[item.id] || false}
                     onCheckedChange={(checked) =&gt; handleCheck(item.id, checked as boolean)}
                   /&gt;
-                  &lt;Label 
+                  &lt;Label
                     htmlFor={`check-${item.id}`}
                     className={`text-sm cursor-pointer ${checkedItems[item.id] ? "line-through text-muted-foreground" : ""}`}
                   &gt;
@@ -343,7 +343,7 @@ export function TravelChecklist() {
         ))}
       &lt;/CardContent&gt;
     &lt;/Card&gt;
-  )
+  );
 }
 &nbsp;</pre></td></tr></table></pre>
 
@@ -352,7 +352,7 @@ export function TravelChecklist() {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-07-04T06:31:46.789Z
+                at 2026-07-04T07:19:51.192Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

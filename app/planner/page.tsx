@@ -9,7 +9,7 @@ export default function PlannerPage() {
           Tell us about your dream trip, and our AI will curate the perfect itinerary.
         </p>
       </div>
-      
+
       <TravelForm />
     </div>
   );

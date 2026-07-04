@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { Checkbox } from "@/components/ui/checkbox"
-import { Label } from "@/components/ui/label"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import * as React from "react";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const defaultChecklist = {
   documents: [
@@ -29,34 +29,34 @@ const defaultChecklist = {
     { id: "adapter", label: "Travel Adapter" },
     { id: "toiletries", label: "Toiletries" },
     { id: "waterbottle", label: "Reusable Water Bottle" },
-  ]
-}
+  ],
+};
 
 export function TravelChecklist() {
-  const [checkedItems, setCheckedItems] = React.useState<Record<string, boolean>>({})
-  const [isLoaded, setIsLoaded] = React.useState(false)
+  const [checkedItems, setCheckedItems] = React.useState<Record<string, boolean>>({});
+  const [isLoaded, setIsLoaded] = React.useState(false);
 
   React.useEffect(() => {
     // Load from local storage on mount
-    const saved = localStorage.getItem("culture-compass-checklist")
+    const saved = localStorage.getItem("culture-compass-checklist");
     if (saved) {
       try {
         // eslint-disable-next-line react-hooks/set-state-in-effect
-        setCheckedItems(JSON.parse(saved))
+        setCheckedItems(JSON.parse(saved));
       } catch (e) {
-        console.error("Failed to parse checklist from local storage", e)
+        console.error("Failed to parse checklist from local storage", e);
       }
     }
-    setIsLoaded(true)
-  }, [])
+    setIsLoaded(true);
+  }, []);
 
   const handleCheck = (id: string, checked: boolean) => {
-    const newChecked = { ...checkedItems, [id]: checked }
-    setCheckedItems(newChecked)
-    localStorage.setItem("culture-compass-checklist", JSON.stringify(newChecked))
-  }
+    const newChecked = { ...checkedItems, [id]: checked };
+    setCheckedItems(newChecked);
+    localStorage.setItem("culture-compass-checklist", JSON.stringify(newChecked));
+  };
 
-  if (!isLoaded) return null // Prevent hydration mismatch
+  if (!isLoaded) return null; // Prevent hydration mismatch
 
   return (
     <Card className="glass h-full">
@@ -72,12 +72,12 @@ export function TravelChecklist() {
             <div className="space-y-2">
               {items.map((item) => (
                 <div key={item.id} className="flex items-center space-x-2">
-                  <Checkbox 
-                    id={`check-${item.id}`} 
+                  <Checkbox
+                    id={`check-${item.id}`}
                     checked={checkedItems[item.id] || false}
                     onCheckedChange={(checked) => handleCheck(item.id, checked as boolean)}
                   />
-                  <Label 
+                  <Label
                     htmlFor={`check-${item.id}`}
                     className={`text-sm cursor-pointer ${checkedItems[item.id] ? "line-through text-muted-foreground" : ""}`}
                   >
@@ -90,5 +90,5 @@ export function TravelChecklist() {
         ))}
       </CardContent>
     </Card>
-  )
+  );
 }

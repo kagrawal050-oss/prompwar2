@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>67/67</span>
+                <span class='fraction'>84/84</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>67/67</span>
+                <span class='fraction'>84/84</span>
             </div>
         
             
@@ -130,7 +130,24 @@
 <a name='L65'></a><a href='#L65'>65</a>
 <a name='L66'></a><a href='#L66'>66</a>
 <a name='L67'></a><a href='#L67'>67</a>
-<a name='L68'></a><a href='#L68'>68</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -152,6 +169,15 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
@@ -188,34 +214,42 @@
 <span class="cline-any cline-yes">22x</span>
 <span class="cline-any cline-yes">22x</span>
 <span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">22x</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export interface TravelPlanParams {
-  destination: string
-  budget: string
-  duration: number
-  travelStyle: string
-  interests: string[]
+  destination: string;
+  budget: string;
+  duration: number;
+  travelStyle: string;
+  interests: string[];
 }
 &nbsp;
 export interface TravelPlanResponse {
-  destination: string
-  topAttractions: { name: string; description: string }[]
-  hiddenGems: { name: string; description: string }[]
-  localFoods: { name: string; description: string }[]
-  culturalExperiences: { name: string; description: string }[]
-  festivals: { name: string; description: string }[]
-  itinerary: { day: number; activities: { time: string; description: string }[] }[]
-  travelTips: string[]
-  estimatedBudget: string
-  story: string
+  destination: string;
+  topAttractions: { name: string; description: string }[];
+  hiddenGems: { name: string; description: string }[];
+  localFoods: { name: string; description: string }[];
+  culturalExperiences: { name: string; description: string }[];
+  festivals: { name: string; description: string }[];
+  itinerary: { day: number; activities: { time: string; description: string }[] }[];
+  travelTips: string[];
+  estimatedBudget: string;
+  story: string;
 }
 &nbsp;
 export async function generateTravelPlan(params: TravelPlanParams): Promise&lt;TravelPlanResponse&gt; {
@@ -230,39 +264,56 @@ export async function generateTravelPlan(params: TravelPlanParams): Promise&lt;T
     topAttractions: [
       { name: "Central Plaza", description: "The historic heart of the city." },
       { name: "National Museum", description: "Learn about the rich history and culture." },
-      { name: "City Viewpoint", description: "Panoramic views of the skyline." }
+      { name: "City Viewpoint", description: "Panoramic views of the skyline." },
     ],
     hiddenGems: [
       { name: "Old Quarter Alley", description: "A quiet street filled with local artisans." },
-      { name: "Secret Garden Café", description: "Tucked away behind the main street, perfect for relaxing." }
+      {
+        name: "Secret Garden Café",
+        description: "Tucked away behind the main street, perfect for relaxing.",
+      },
     ],
     localFoods: [
       { name: "Street Market Dumplings", description: "A local favorite for a quick bite." },
-      { name: "Traditional Roast", description: "A hearty meal often shared with family." }
+      { name: "Traditional Roast", description: "A hearty meal often shared with family." },
     ],
     culturalExperiences: [
       { name: "Local Cooking Class", description: "Learn to cook authentic dishes." },
-      { name: "Traditional Tea Ceremony", description: "Experience a mindful and historic practice." }
+      {
+        name: "Traditional Tea Ceremony",
+        description: "Experience a mindful and historic practice.",
+      },
     ],
     festivals: [
-      { name: "Summer Solstice Festival", description: "A vibrant celebration with music and dance." }
+      {
+        name: "Summer Solstice Festival",
+        description: "A vibrant celebration with music and dance.",
+      },
     ],
     itinerary: Array.from({ length: Math.min(duration, 7) }).map((_, i) =&gt; ({
       day: i + 1,
       activities: [
-        { time: "Morning", description: `Explore the ${interests[0]<span class="branch-0 cbranch-no" title="branch not covered" > || 'local'} </span>spots.` },
-        { time: "Afternoon", description: "Enjoy a relaxing lunch and visit the main attractions." },
-        { time: "Evening", description: `Dinner and experiencing the ${travelStyle} nightlife.` }
-      ]
+        { time: "Morning", description: `Explore the ${interests[0]<span class="branch-0 cbranch-no" title="branch not covered" > || "local"} </span>spots.` },
+        {
+          time: "Afternoon",
+          description: "Enjoy a relaxing lunch and visit the main attractions.",
+        },
+        { time: "Evening", description: `Dinner and experiencing the ${travelStyle} nightlife.` },
+      ],
     })),
     travelTips: [
       "Carry some cash as small vendors might not accept cards.",
       "Public transport is the best way to get around.",
-      "Always greet locals with a smile and a simple 'hello' in their language."
+      "Always greet locals with a smile and a simple 'hello' in their language.",
     ],
-    estimatedBudget: budget === "low" ? "$50 - $100 per day" : budget === "medium" ? "$150 - $300 per day" : "$400+ per day",
-    story: `Welcome to ${destination}, a place where history and modernity blend seamlessly. Legend has it that the city was founded centuries ago by travelers who were captivated by its natural beauty. As you walk through its vibrant streets, you can still feel the echoes of ancient traditions alive in the smiles of the locals. Whether you're traveling as a ${travelStyle} or seeking new ${interests.join(' and ')} experiences, ${destination} promises an unforgettable adventure filled with breathtaking sights, delicious flavors, and stories waiting to be discovered.`
-  }
+    estimatedBudget:
+      budget === "low"
+        ? "$50 - $100 per day"
+        : budget === "medium"
+          ? "$150 - $300 per day"
+          : "$400+ per day",
+    story: `Welcome to ${destination}, a place where history and modernity blend seamlessly. Legend has it that the city was founded centuries ago by travelers who were captivated by its natural beauty. As you walk through its vibrant streets, you can still feel the echoes of ancient traditions alive in the smiles of the locals. Whether you're traveling as a ${travelStyle} or seeking new ${interests.join(" and ")} experiences, ${destination} promises an unforgettable adventure filled with breathtaking sights, delicious flavors, and stories waiting to be discovered.`,
+  };
 }
 &nbsp;</pre></td></tr></table></pre>
 
@@ -271,7 +322,7 @@ export async function generateTravelPlan(params: TravelPlanParams): Promise&lt;T
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-07-04T06:31:46.789Z
+                at 2026-07-04T07:19:51.192Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

@@ -20,12 +20,16 @@ export default function Home() {
             Discover Your Next Destination
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground md:px-12">
-            Let our intelligent engine craft the perfect itinerary tailored to your budget, travel style, and unique interests. Explore the world like never before.
+            Let our intelligent engine craft the perfect itinerary tailored to your budget, travel
+            style, and unique interests. Explore the world like never before.
           </p>
         </div>
-        
+
         <div className="flex flex-col sm:flex-row gap-4">
-          <Link href="/planner" className={cn(buttonVariants({ size: "lg" }), "rounded-full shadow-lg group")}>
+          <Link
+            href="/planner"
+            className={cn(buttonVariants({ size: "lg" }), "rounded-full shadow-lg group")}
+          >
             Get Started
             <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Link>

@@ -23,18 +23,21 @@ export default function RootLayout({
           <div className="container mx-auto px-4 h-16 flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-2">
               <Compass className="h-6 w-6 text-primary" />
-              <span className="font-bold text-xl tracking-tight text-foreground">Culture Compass</span>
+              <span className="font-bold text-xl tracking-tight text-foreground">
+                Culture Compass
+              </span>
             </Link>
             <nav className="flex items-center space-x-6 text-sm font-medium">
-              <Link href="/planner" className="transition-colors hover:text-primary text-muted-foreground">
+              <Link
+                href="/planner"
+                className="transition-colors hover:text-primary text-muted-foreground"
+              >
                 Plan a Trip
               </Link>
             </nav>
           </div>
         </header>
-        <main className="flex-1">
-          {children}
-        </main>
+        <main className="flex-1">{children}</main>
         <footer className="no-print border-t py-6 md:py-0">
           <div className="container mx-auto px-4 flex flex-col items-center justify-center gap-4 md:h-16 md:flex-row">
             <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">

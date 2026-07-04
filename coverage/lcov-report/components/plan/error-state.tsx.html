@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for components/ui/label.tsx</title>
+    <title>Code coverage report for components/plan/error-state.tsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">components/ui</a> label.tsx</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">components/plan</a> error-state.tsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>18/18</span>
+                <span class='fraction'>23/23</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>18/18</span>
+                <span class='fraction'>23/23</span>
             </div>
         
             
@@ -81,7 +81,12 @@
 <a name='L16'></a><a href='#L16'>16</a>
 <a name='L17'></a><a href='#L17'>17</a>
 <a name='L18'></a><a href='#L18'>18</a>
-<a name='L19'></a><a href='#L19'>19</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -99,24 +104,34 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import * as React from "react";
-import { cn } from "@/lib/utils";
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import Link from "next/link";
+import { AlertCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
 &nbsp;
-export type LabelProps = React.LabelHTMLAttributes&lt;HTMLLabelElement&gt;;
-&nbsp;
-const Label = React.forwardRef&lt;HTMLLabelElement, LabelProps&gt;(({ className, ...props }, ref) =&gt; (
-  &lt;label
-    ref={ref}
-    className={cn(
-      "text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70",
-      className
-    )}
-    {...props}
-  /&gt;
-));
-Label.displayName = "Label";
-&nbsp;
-export { Label };
+export function PlanErrorState() {
+  return (
+    &lt;div className="flex flex-col items-center justify-center min-h-[50vh] text-center space-y-6"&gt;
+      &lt;div className="w-20 h-20 bg-destructive/10 rounded-full flex items-center justify-center mb-4"&gt;
+        &lt;AlertCircle className="w-10 h-10 text-destructive" /&gt;
+      &lt;/div&gt;
+      &lt;h2 className="text-3xl font-bold tracking-tight text-destructive"&gt;
+        Oops! Something went wrong.
+      &lt;/h2&gt;
+      &lt;p className="text-muted-foreground max-w-md"&gt;
+        We couldn't generate your travel plan at this time. Please check your network connection and
+        try again.
+      &lt;/p&gt;
+      &lt;Button asChild size="lg" className="rounded-full shadow-lg"&gt;
+        &lt;Link href="/planner"&gt;Try Again&lt;/Link&gt;
+      &lt;/Button&gt;
+    &lt;/div&gt;
+  );
+}
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
