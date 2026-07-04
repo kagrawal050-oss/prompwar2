@@ -1,0 +1,43 @@
+
+> culture-compass@0.1.0 test
+> jest --coverage
+
+PASS __tests__/utils.test.ts (10.683 s)
+PASS __tests__/ai-service.test.ts (14.385 s)
+PASS __tests__/checklist.test.tsx (15.76 s)
+PASS __tests__/page.test.tsx (18.472 s)
+PASS __tests__/travel-form.test.tsx (20.369 s)
+PASS __tests__/plan-page.test.tsx (20.138 s)
+PASS __tests__/planner-page.test.tsx (19.979 s)
+--------------------|---------|----------|---------|---------|-------------------
+File                | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+--------------------|---------|----------|---------|---------|-------------------
+All files           |   93.66 |    71.42 |   83.33 |   93.66 |                   
+ app                |   58.62 |       50 |      50 |   58.62 |                   
+  layout.tsx        |       0 |        0 |       0 |       0 | 1-48              
+  page.tsx          |     100 |      100 |     100 |     100 |                   
+ app/plan           |     100 |    41.17 |   33.33 |     100 |                   
+  page.tsx          |     100 |    41.17 |   33.33 |     100 | 11-15             
+ app/planner        |     100 |      100 |     100 |     100 |                   
+  page.tsx          |     100 |      100 |     100 |     100 |                   
+ components/plan    |   97.87 |    91.66 |     100 |   97.87 |                   
+  checklist.tsx     |   97.87 |    91.66 |     100 |   97.87 | 47-48             
+ components/planner |   98.91 |       80 |     100 |   98.91 |                   
+  travel-form.tsx   |   98.91 |       80 |     100 |   98.91 | 72,81             
+ components/ui      |   99.03 |    83.33 |     100 |   99.03 |                   
+  button.tsx        |     100 |      100 |     100 |     100 |                   
+  card.tsx          |     100 |      100 |     100 |     100 |                   
+  checkbox.tsx      |   94.44 |    66.66 |     100 |   94.44 | 22-23             
+  input.tsx         |     100 |      100 |     100 |     100 |                   
+  label.tsx         |     100 |      100 |     100 |     100 |                   
+ lib                |     100 |      100 |     100 |     100 |                   
+  utils.ts          |     100 |      100 |     100 |     100 |                   
+ lib/services       |     100 |    77.77 |     100 |     100 |                   
+  ai-service.ts     |     100 |    77.77 |     100 |     100 | 30,54             
+--------------------|---------|----------|---------|---------|-------------------
+
+Test Suites: 7 passed, 7 total
+Tests:       16 passed, 16 total
+Snapshots:   0 total
+Time:        42.95 s
+Ran all test suites.
